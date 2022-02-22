@@ -1,0 +1,103 @@
+﻿@page "/"
+@using Microsoft.JSInterop
+@inject IJSRuntime JSRuntime
+
+<div class="container">
+    <div class="header text-center p-5">
+        <h3 class="d-3"> Day Scheduler </h3>
+    </div>
+
+    <div class="schedulerBody">
+        <table class="table table-bordered d-none">
+            <thead>
+                <tr>
+                    <th scope="col">?</th>
+                    <th scope="col">?</th>
+                    <th scope="col">?</th>
+                    <th scope="col">?</th>
+                    <th scope="col" colspan="2">7:00</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>mdo</td>
+                    <td>mdo</td>
+                    <td>mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>twitter</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>?</th>
+                    <th>?</th>
+                    <th>?</th>
+                    <th>?</th>
+                    <th colspan="2">7:00</th>
+                    <th colspan="2">7:30</th>
+                    <th colspan="2">8:00</th>
+                    <th colspan="2">8:30</th>
+                    <th colspan="2">9:00</th>
+                    <th colspan="2">9:30</th>
+                    <th colspan="2">10:00</th>
+                    <th colspan="2">10:30</th>
+                    <th colspan="2">11:00</th>
+                    <th colspan="2">11:30</th>
+                    <th colspan="2">12:00</th>
+                    <th colspan="2">12:30</th>
+                    <th colspan="2">13:00</th>
+                    <th colspan="2">13:30</th>
+                    <th colspan="2">14:00</th>
+                    <th colspan="2">14:30</th>
+                    <th colspan="2">15:00</th>
+                    <th colspan="2">15:30</th>
+                    <th colspan="2">16:00</th>
+                    <th colspan="2">16:30</th>
+                    <th colspan="2">17:00</th>
+                    <th class="bg-success">VZ</th>
+                    <th class="bg-danger">B</th>
+                    <th class="bg-warning">AH</th>
+                    <th class="bg-secondary">GS</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var employee in Employees)
+                {
+                    <tr class="tr-employee">
+
+                        @for (var i = 0; i < 50; i++)
+                        {
+                            <td class="td-timestamp"></td>
+                        }
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+
+
+</div>
+
+
+@code {
+    List<Employee> Employees = new List<Employee> { new Employee("Veronika"), new Employee("Veronika2"), new Employee("Veronika3"), new Employee("Veronika4") };
+
+}
