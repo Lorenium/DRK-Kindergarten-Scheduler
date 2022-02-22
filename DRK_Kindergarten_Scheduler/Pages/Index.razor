@@ -81,9 +81,21 @@
                 {
                     <tr class="tr-employee">
 
-                        @for (var i = 0; i < 50; i++)
+                        @for(var i = 0; i < 5; i++)
+                        {
+                            <td class="td-employeeData"></td>
+                        }
+
+                        @*Timestamp cells*@
+                        @for (var i = 0; i < 42; i++)
                         {
                             <td class="td-timestamp"></td>
+                        }
+
+                        @*Total value cells*@
+                        @for (var i = 0; i < 4; i++)
+                        {
+                            <td class="td-total"></td>
                         }
 
                     </tr>
