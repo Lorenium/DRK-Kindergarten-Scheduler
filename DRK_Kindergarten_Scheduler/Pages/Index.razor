@@ -81,7 +81,11 @@
                 {
                     <tr class="tr-employee">
 
-                        @for(var i = 0; i < 5; i++)
+                        @*Employee data cells*@
+
+                        <td class="td-employeeData">@employee.Name</td>
+
+                        @for(var i = 0; i < 4; i++)
                         {
                             <td class="td-employeeData"></td>
                         }

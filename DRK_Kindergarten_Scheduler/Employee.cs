@@ -9,12 +9,12 @@ namespace DRK_Kindergarten_Scheduler
     public class Employee
     {
         public string Name { get; private set; }
-        public Guid EmployeeID { get; private set; }
+        public Guid ID { get; private set; }
 
         public Employee(string name)
         {
             Name = name;
-            EmployeeID = new Guid();
+            ID = Guid.NewGuid();
         }
     }
 }
