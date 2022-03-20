@@ -9,9 +9,9 @@ app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
 db = SQLAlchemy(app)
 
-class Personnel(db.model):
+class Personnel(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    date_created = db.Column(db.DateTime, defualt = datetime.utcnow)
+    date_created = db.Column(db.DateTime, default = datetime.utcnow)
 
     # string representation of a personnel (to do: change)
     def __repr__(self):
@@ -21,9 +21,4 @@ class Personnel(db.model):
 @app.route('/', methods=['POST', 'GET'])
 def index():
     return render_template("index.html")
-
-
-
-
-
 
