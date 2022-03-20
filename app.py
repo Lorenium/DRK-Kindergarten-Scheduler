@@ -13,9 +13,14 @@ class Personnel(db.model):
     id = db.Column(db.Integer, primary_key=True)
     date_created = db.Column(db.DateTime, defualt = datetime.utcnow)
 
+    # string representation of a personnel (to do: change)
     def __repr__(self):
         return '<Personnel %r>' % self.id
 
+# index route
+@app.route('/', methods=['POST', 'GET'])
+def index():
+    return render_template("index.html")
 
 
 
